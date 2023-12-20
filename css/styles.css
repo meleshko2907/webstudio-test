@@ -52,10 +52,9 @@ img{
 
 .header-container{
     display: flex;
-    align-items: center;
-    padding-top: 24px;
-    padding-bottom: 25px;
+    align-items: center
 }
+
 header{
     border-bottom:  1px solid #ECECEC;
 }
@@ -101,6 +100,10 @@ header{
     color: var(--secondary-color);
 }
 
+.current-page{
+    color: var(--secondary-color);
+}
+
 .contact-list{
     display: flex;
     margin-left: auto;
@@ -116,11 +119,19 @@ header{
     letter-spacing: 0.28px;
     padding-top: 32px;
     padding-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .contacts-item-link:hover, 
 .contacts-item-link:focus {
     color: var(--secondary-color);
+
+}
+
+.header-icons{
+    fill: currentColor;
 }
 
 /*-- hero --*/
@@ -131,6 +142,8 @@ header{
     margin-left: auto;
     padding-top: 200px;
     padding-bottom: 200px;
+    max-width: 1600px;
+    background-image: url(../img/backgroud-hero-Img.jpg);
 }
 
 .hero-title{
@@ -183,6 +196,13 @@ header{
     gap: 30px;
 }
 
+.advantages-cover{
+    padding: 25px 100px;
+    border-radius: 4px;
+    background: #F5F4FA;
+    margin-bottom: 30px;
+}
+
 .advantages-main-title{
     display: none;
 }
@@ -224,7 +244,32 @@ header{
     gap: 30px;
 }
 
+.about-us-item{
+    position: relative;
+}
+
+.overlay-text{
+    position: absolute;
+    bottom: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    color: #EEEEEE;
+    background-color: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+}
+
 /*--- our team ---*/
+
+.our-team{
+    background-color: #F5F4FA;
+}
 
 .our-team-title{
     color: var(--brand-color);
@@ -266,6 +311,7 @@ header{
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.48px;
+    margin-bottom: 16px;
 }
 
 .name-job{
@@ -274,12 +320,86 @@ header{
     margin-bottom: 30px;
 }
 
+.social-icon-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icon-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.social-icon{
+    fill: #AFB1B8;
+}
+
+.social-icon-item:hover,
+.social-icon-item:focus{
+    background-color: var(--secondary-color);
+}
+
+.social-icon-item:hover .social-icon,
+.social-icon-item:focus .social-icon{
+    fill: #EEEEEE;
+}
+
+/*---  Clients ----*/
+
+.clients-title{
+    color: #212121;
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.08px;
+    margin-bottom: 50px;
+}
+
+.clients-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.clients-item{
+    padding: 16px 32px;
+    border-radius: 4px;
+    border: 1px solid #AFB1B8;
+}
+
+.clients-item:hover,
+.clients-item:focus{
+    border: 1px solid var(--secondary-color);
+}
+
+.clients-icon{
+    fill: #AFB1B8;
+}
+
+.clients-item:hover .clients-icon,
+.clients-item:focus .clients-icon{
+    fill: var(--secondary-color);
+}
+
 /*--footer ---*/
 
 .footer-container{
+    display: flex;
     background-color: #2F303A;
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.footer-contact{
+    margin-right: 70px;
 }
 
 .footer-address{
@@ -299,7 +419,7 @@ margin-top: 20px;
     letter-spacing: 0.42px;
 }
 
-.footer-contact{
+.footer-tel{
     color: rgba(255, 255, 255, 0.60);
     font-style: normal;
     font-size: 14px;
@@ -308,7 +428,40 @@ margin-top: 20px;
     letter-spacing: 0.42px;
 }
 
+.footer-socials{
+   display: block;
+   justify-content: baseline;
+   align-items: flex-start;
+   margin-right: auto;
+   margin-top: 12px;
+}
 
+.socials-title{
+    display: block;
+    color: #FFF; 
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer-icon-list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-icon-item{
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+.footer-icon{
+    fill: #FFFFFF;
+}
 
 /*------   PORTFOLIO -------*/
 
@@ -339,6 +492,8 @@ margin-top: 20px;
     border: 0;
     border-radius: 4px;
     background: #F5F4FA;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+
 }
 
 .portfolio-btn:hover,
@@ -360,14 +515,18 @@ margin-top: 20px;
     margin-bottom: 0px;
 }
 
-
-.portfolio-item{
+.portfolio-item {
     flex-basis: calc((100%-60px)/3);
     flex-basis: 370px;
     max-width: 370px;
 
     border: 1px solid #EEE;
     background: #FFF;
+}
+
+.portfolio-item:hover,
+.portfolio-item:focus{
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
 .description{
@@ -378,8 +537,9 @@ margin-top: 20px;
     border: 1px solid #EEEEEE;
     border-top: none;
 }
+
 .portfolio-name{
-    color: var(--brand-color);
+    color:var(--brand-color);
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
